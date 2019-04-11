@@ -1,10 +1,10 @@
 resource "aws_iam_instance_profile" "packer" {
-  name = "packer-instance-profile"
+  name = "packer"
   role = "${aws_iam_role.packer.name}"
 }
 
 resource "aws_iam_role" "packer" {
-  name               = "packer-role"
+  name               = "packer"
   assume_role_policy = "${data.aws_iam_policy_document.assume_ec2.json}"
 }
 
@@ -27,7 +27,7 @@ resource "aws_iam_role_policy_attachment" "packer" {
 }
 
 resource "aws_iam_policy" "packer" {
-  name        = "packer-policy"
+  name        = "packer"
   description = "Minimal set permissions necessary for Packer to work"
   policy      = "${data.aws_iam_policy_document.packer.json}"
 }

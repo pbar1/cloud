@@ -5,7 +5,6 @@ locals {
     var.tags,
     map("Name", local.name),
     map("Environment", var.environment),
-    map("ManagedBy", "Terraform")
   )}"
 }
 

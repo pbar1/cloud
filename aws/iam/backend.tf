@@ -1,7 +1,7 @@
 terraform {
   backend "gcs" {
     bucket = "tf-state-390820"
-    prefix = "cloud/aws/iam" # should mirror repo structure for clarity
+    prefix = "cloud/aws/iam"   # should mirror repo structure for clarity
   }
 }
 
